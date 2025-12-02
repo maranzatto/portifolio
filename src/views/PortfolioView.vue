@@ -176,12 +176,12 @@
                 <i class="pi pi-github"></i>
                 <span>GitHub</span>
               </a>
-              <a href="hhttps://www.linkedin.com/in/amitaelmaranzatto/" target="_blank" rel="noopener noreferrer"
+              <a href="https://www.linkedin.com/in/amitaelmaranzatto/" target="_blank" rel="noopener noreferrer"
                 class="social__link linkedin">
                 <i class="pi pi-linkedin"></i>
                 <span>LinkedIn</span>
               </a>
-              <a href="public\AmitaelMaranzattoDev.pdf" download class="social__link curriculum">
+              <a href="public/AmitaelMaranzattoDev.pdf" download class="social__link curriculum">
                 <i class="pi pi-download"></i>
                 <span>Currículo</span>
               </a>
