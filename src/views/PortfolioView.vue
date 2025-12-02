@@ -665,7 +665,7 @@ import IconVue from '@/assets/icons/IconVue.vue';
 /* Skills styles */
 .skills-grid {
   display: grid;
-  grid-template-columns: 1fr 360px;
+  grid-template-columns: 1fr;
   gap: 2rem;
   align-items: start;
 }
@@ -690,13 +690,13 @@ import IconVue from '@/assets/icons/IconVue.vue';
 .vue-card__logo img {
   width: 96px;
   height: 96px;
-  display: block
+  display: block;
 }
 
 .tech-card__head img {
   width: 36px;
   height: 36px;
-  display: block
+  display: block;
 }
 
 .tech-logo {
@@ -716,68 +716,72 @@ import IconVue from '@/assets/icons/IconVue.vue';
 .vue-card__desc {
   color: rgba(255, 255, 255, 0.8);
   margin-bottom: 0.8rem;
+  line-height: 1.6;
 }
 
 .vue-card__meta {
   display: flex;
   gap: 0.5rem;
   flex-wrap: wrap;
-  margin-top: 0.8rem
+  margin-top: 0.8rem;
 }
 
 .meta-pill {
   background: rgba(255, 255, 255, 0.05);
   padding: 0.25rem 0.6rem;
   border-radius: 999px;
-  font-size: 0.85rem
+  font-size: 0.85rem;
 }
 
 .tech-cards {
   display: flex;
   flex-direction: column;
-  gap: 1rem
+  gap: 1rem;
 }
 
 .tech-card {
   background: rgba(255, 255, 255, 0.02);
   border-radius: 10px;
   padding: 0.9rem;
-  border: 1px solid rgba(255, 255, 255, 0.03)
+  border: 1px solid rgba(255, 255, 255, 0.03);
 }
 
 .tech-card__head {
   display: flex;
   gap: 0.8rem;
   align-items: center;
-  margin-bottom: 0.6rem
+  margin-bottom: 0.6rem;
 }
 
 .tech-card__info {
   display: flex;
-  flex-direction: column
+  flex-direction: column;
+  flex: 1;
 }
 
 .tech-card__name {
-  font-weight: 700
+  font-weight: 700;
+  font-size: 0.95rem;
 }
 
 .tech-card__sub {
   font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.7)
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .skill__bar {
   background: rgba(255, 255, 255, 0.03);
   border-radius: 999px;
-  overflow: hidden
+  overflow: hidden;
+  margin-top: 0.4rem;
 }
 
 .skill--large {
-  height: 14px
+  height: 14px;
 }
 
 .skill--small {
-  height: 10px
+  height: 10px;
 }
 
 .skill__progress {
@@ -785,14 +789,14 @@ import IconVue from '@/assets/icons/IconVue.vue';
   width: 0;
   transition: width 900ms cubic-bezier(.2, .9, .2, 1);
   background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
-  box-shadow: inset 0 -4px 10px rgba(0, 0, 0, 0.25)
+  box-shadow: inset 0 -4px 10px rgba(0, 0, 0, 0.25);
 }
 
 .skills-tools {
   margin-top: 1rem;
   display: flex;
   gap: 0.6rem;
-  flex-wrap: wrap
+  flex-wrap: wrap;
 }
 
 .tool {
@@ -800,7 +804,18 @@ import IconVue from '@/assets/icons/IconVue.vue';
   padding: 0.4rem 0.7rem;
   background: rgba(255, 255, 255, 0.03);
   border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.03)
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+/* Desktop skills layout */
+@media (min-width: 1024px) {
+  .skills-grid {
+    grid-template-columns: 1fr 360px;
+    gap: 2rem;
+  }
 }
 
 
@@ -820,6 +835,353 @@ import IconVue from '@/assets/icons/IconVue.vue';
 
   .section {
     padding: 3rem 0;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .hero__content {
+    max-width: 100%;
+  }
+
+  .about__content p {
+    font-size: 0.95rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .vue-card {
+    padding: 1.2rem;
+  }
+
+  .vue-card__logo {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 0.4rem;
+  }
+
+  .vue-card__title {
+    font-size: 1.1rem;
+  }
+
+  .vue-card__desc {
+    font-size: 0.9rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .meta-pill {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.4rem;
+  }
+
+  .tech-cards {
+    gap: 0.8rem;
+  }
+
+  .tech-card {
+    padding: 0.7rem;
+  }
+
+  .tech-logo {
+    font-size: 24px;
+  }
+
+  .tech-card__name {
+    font-size: 0.95rem;
+  }
+
+  .tech-card__sub {
+    font-size: 0.8rem;
+  }
+
+  .skill__bar.large {
+    height: 10px;
+  }
+
+  .skills-tools {
+    gap: 0.5rem;
+  }
+
+  .tool {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.5rem;
+  }
+
+  .projects__grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .project__card {
+    padding: 1.5rem;
+  }
+
+  .project__header {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .project__description {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+
+  .project__link {
+    font-size: 0.95rem;
+  }
+
+  .contact__content {
+    padding: 2rem 1.5rem;
+    margin: 0 auto 2rem;
+  }
+
+  .contact__email-link {
+    font-size: 1.2rem;
+  }
+
+  .social__links {
+    gap: 0.8rem;
+  }
+
+  .social__link {
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+    gap: 0.4rem;
+  }
+
+  .social__link svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .contact__footer {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    min-height: 80vh;
+    padding: 1rem;
+  }
+
+  .hero__title {
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .hero__subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero__cta {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .section {
+    padding: 2rem 0;
+    scroll-margin-top: 60px;
+  }
+
+  .section__title {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .container {
+    padding: 0 0.75rem;
+  }
+
+  .about__content p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  /* Skills section mobile */
+  .skills {
+    padding: 1.5rem 0;
+  }
+
+  .skills-grid {
+    gap: 1rem;
+  }
+
+  .vue-card {
+    padding: 1rem;
+    box-shadow: 0 4px 16px rgba(2, 6, 23, 0.2);
+  }
+
+  .vue-card__logo {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 0.5rem;
+  }
+
+  .vue-card__title {
+    font-size: 1rem;
+    margin: 0.1rem 0 0.3rem;
+  }
+
+  .vue-card__desc {
+    font-size: 0.8rem;
+    line-height: 1.4;
+    margin-bottom: 0.6rem;
+  }
+
+  .meta-pill {
+    font-size: 0.65rem;
+    padding: 0.15rem 0.25rem;
+  }
+
+  .tech-cards {
+    gap: 0.6rem;
+  }
+
+  .tech-card {
+    padding: 0.6rem;
+  }
+
+  .tech-card__head {
+    gap: 0.5rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .tech-logo {
+    font-size: 18px;
+  }
+
+  .tech-card__name {
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+
+  .tech-card__sub {
+    font-size: 0.75rem;
+    line-height: 1.3;
+  }
+
+  .skill__bar {
+    margin-top: 0.3rem;
+  }
+
+  .skill--large {
+    height: 8px;
+  }
+
+  .skill--small {
+    height: 6px;
+  }
+
+  .skills-tools {
+    margin-top: 0.7rem;
+    gap: 0.35rem;
+  }
+
+  .tool {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.4rem;
+    gap: 0.2rem;
+  }
+
+  /* Projects section mobile */
+  .projects__grid {
+    gap: 1rem;
+  }
+
+  .project__card {
+    padding: 1.2rem;
+    border-radius: 0.4rem;
+  }
+
+  .project__card:hover {
+    transform: translateY(-4px);
+  }
+
+  .project__header {
+    font-size: 1rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .project__description {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin-bottom: 0.9rem;
+  }
+
+  .projects__more {
+    margin-top: 1.5rem;
+  }
+
+  .project__more-btn {
+    padding: 0.75rem 1.2rem;
+    font-size: 0.9rem;
+    border-radius: 8px;
+  }
+
+  /* Contact section mobile */
+  .contact {
+    padding: 3rem 0;
+  }
+
+  .contact .section__title {
+    margin-bottom: 0.8rem;
+  }
+
+  .contact__subtitle {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .contact__content {
+    padding: 1.5rem 1rem;
+    margin: 0 auto 1.5rem;
+  }
+
+  .contact__email-label,
+  .contact__social-label {
+    font-size: 0.85rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .contact__email-link {
+    font-size: 1.1rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .contact__divider {
+    font-size: 0.8rem;
+    margin: 1.5rem 0;
+  }
+
+  .social__links {
+    gap: 0.6rem;
+  }
+
+  .social__link {
+    padding: 0.5rem 0.9rem;
+    font-size: 0.8rem;
+  }
+
+  .social__link span {
+    display: none;
+  }
+
+  .social__link svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .contact__footer {
+    font-size: 0.8rem;
+    margin-top: 1.5rem;
   }
 }
 </style>

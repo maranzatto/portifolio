@@ -127,5 +127,91 @@ const projects = ref([
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     gap: 1.2rem;
   }
+
+  .project__card {
+    padding: 1.5rem;
+  }
+
+  .project__header {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .project__description {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+
+  .project__link {
+    font-size: 0.95rem;
+  }
+
+  .project__more-btn {
+    padding: 0.8rem 1.2rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 2rem 0;
+    scroll-margin-top: 70px;
+  }
+
+  .container {
+    padding: 0 0.75rem;
+  }
+
+  .section__title {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+  }
+
+  .projects__grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .project__card {
+    padding: 1.2rem;
+    border-radius: 0.4rem;
+    border-top-width: 3px;
+  }
+
+  .project__card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  .project__header {
+    font-size: 1rem;
+    margin-bottom: 0.7rem;
+    font-weight: 600;
+  }
+
+  .project__description {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin-bottom: 0.9rem;
+  }
+
+  .project__link {
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+
+  .projects__more {
+    margin-top: 1.5rem;
+  }
+
+  .project__more-btn {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+    border-radius: 8px;
+  }
+
+  .project__more-btn:hover {
+    transform: translateY(-2px);
+  }
 }
 </style>
