@@ -34,3 +34,21 @@ coverage
 
 # Vitest
 __screenshots__/
+
+# GitHub Pages deployment
+node_modules/
+dist/
+.env.local
+.env.*.local
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
