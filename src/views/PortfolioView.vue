@@ -181,7 +181,7 @@
                 <i class="pi pi-linkedin"></i>
                 <span>LinkedIn</span>
               </a>
-              <a href="public/AmitaelMaranzattoDev.pdf" download class="social__link curriculum">
+              <a href="/portfolio/AmitaelMaranzattoDev.pdf" download class="social__link curriculum">
                 <i class="pi pi-download"></i>
                 <span>Currículo</span>
               </a>
