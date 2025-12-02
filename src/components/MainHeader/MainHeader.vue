@@ -190,14 +190,6 @@ onUnmounted(() => {
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
-  .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-  }
-
   .header__container {
     padding: 1rem 1rem;
     max-width: 100%;

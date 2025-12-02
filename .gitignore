@@ -52,3 +52,6 @@ Thumbs.db
 *.swo
 *~
 
+# Deployment documentation
+DEPLOYMENT.md
+
