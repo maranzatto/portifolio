@@ -61,7 +61,7 @@ onUnmounted(() => {
         <span></span>
         <span></span>
       </button>
-      <nav v-if="menuOpen" :class="['header__nav', { 'header__nav--open': menuOpen }]" @click="closeMenu">
+      <nav :class="['header__nav', { 'header__nav--open': menuOpen }]" @click="closeMenu">
         <a href="javascript:void(0)" @click.stop="navigateToSection('hero')" class="header__link">Home</a>
         <a href="javascript:void(0)" @click.stop="navigateToSection('about')" class="header__link">Sobre</a>
         <a href="javascript:void(0)" @click.stop="navigateToSection('skills')" class="header__link">Habilidades</a>
@@ -190,6 +190,28 @@ onUnmounted(() => {
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
+  .header__nav {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, var(--color-bg-primary) 0%, var(--color-bg-secondary) 100%);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    gap: 0;
+    padding: 2rem 1.5rem;
+    display: none;
+    animation: slideInNav 0.35s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    box-shadow: -2px 0 15px rgba(0, 0, 0, 0.3);
+    overflow-y: auto;
+    max-height: calc(100vh - 56px);
+  }
+
+  .header__nav--open {
+    display: flex;
+  }
+
   .header__container {
     padding: 1rem 1rem;
     max-width: 100%;
@@ -204,64 +226,26 @@ onUnmounted(() => {
     display: flex;
   }
 
-  .header__nav {
-    position: fixed;
-    top: 56px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, var(--color-bg-primary) 0%, var(--color-bg-secondary) 100%);
-    backdrop-filter: blur(10px);
-    flex-direction: column;
-    gap: 0;
-    padding: 2rem 1.5rem;
-    animation: slideInNav 0.35s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-    box-shadow: -2px 0 15px rgba(0, 0, 0, 0.3);
-    overflow-y: auto;
-    max-height: calc(100vh - 56px);
-    display: flex;
-  }
-
-  @keyframes slideInNav {
-    from {
-      transform: translateX(-100%);
-      opacity: 0;
-    }
-
-    to {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-
   .header__link {
-    font-size: 1rem;
-    white-space: normal;
     padding: 1rem 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    display: block;
+    font-size: 1.1rem;
   }
 
   .header__link:last-child {
     border-bottom: none;
   }
+}
 
-  .header__link:hover {
-    color: var(--color-header-link-hover);
+@keyframes slideInNav {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
   }
 
-  .header--scrolled {
-    background-color: var(--color-header-bg);
-    backdrop-filter: blur(10px);
-    margin: 0;
-    border-radius: 0;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    left: 0;
-    right: 0;
-  }
-
-  .header--scrolled .header__container {
-    padding: 0.8rem 1rem;
+  to {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 
@@ -289,7 +273,6 @@ onUnmounted(() => {
   .header__nav {
     top: 48px;
     padding: 1rem 1rem;
-    gap: 0;
   }
 
   .header__link {
