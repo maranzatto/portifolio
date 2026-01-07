@@ -4,7 +4,8 @@
     <section id="hero" class="section hero">
       <div class="hero__content">
         <h1 class="hero__title">Desenvolvedor Front-End & Criativo Digital</h1>
-        <p class="hero__subtitle">Transformando ideias em experiências web excepcionais com código limpo e design intuitivo</p>
+        <p class="hero__subtitle">Transformando ideias em experiências web excepcionais com código limpo e design
+          intuitivo</p>
         <a href="#projects" class="hero__cta">Explorar Meu Trabalho</a>
       </div>
     </section>
@@ -15,15 +16,18 @@
         <h2 class="section__title">Minha Jornada</h2>
         <div class="about__content">
           <p>
-            Olá! Sou <strong>Amitael Maranzatto</strong>, um <strong>Desenvolvedor Front-End</strong> com <strong>3 anos de experiência</strong>
+            Olá! Sou <strong>Amitael Maranzatto</strong>, um <strong>Desenvolvedor Front-End</strong> com <strong>3 anos
+              de experiência</strong>
             apaixonado por criar interfaces que não apenas funcionam bem, mas que encantam usuários. Minha missão é
             transformar conceitos complexos em experiências digitais simples e memoráveis.
           </p>
 
           <p>
-            Minha especialidade inclui <strong>Vue 3</strong>, <strong>TypeScript</strong>, <strong>JavaScript</strong> moderno e
+            Minha especialidade inclui <strong>Vue 3</strong>, <strong>TypeScript</strong>, <strong>JavaScript</strong>
+            moderno e
             <strong>CSS avançado</strong>. Tenho experiência sólida em <strong>arquitetura de componentes</strong>,
-            <strong>estado reativo</strong> com Pinia, e <strong>integração com APIs REST</strong>. Busco sempre escrever
+            <strong>estado reativo</strong> com Pinia, e <strong>integração com APIs REST</strong>. Busco sempre
+            escrever
             código que seja não apenas funcional, mas também mantível e escalável.
           </p>
 
@@ -43,32 +47,55 @@
         <div class="experience__timeline">
           <article class="experience__item">
             <div class="experience__period">
-              <span class="period__date">2023 - Presente</span>
+              <span class="period__date">2025 - Presente</span>
               <span class="period__duration">6 meses</span>
             </div>
             <div class="experience__content">
               <h3 class="experience__title">Desenvolvedor Front-End Autônomo</h3>
               <p class="experience__company">Amitael Maranzatto</p>
               <ul class="experience__achievements">
-                <li>Desenvolvimento e manutenção de interfaces responsivas e interativas com Vue.js, TypeScript e JavaScript</li>
-                <li>Colaboração com equipes de design e back-end para integração de APIs e funcionalidade completa</li>
-                <li>Otimização de desempenho e usabilidade aplicando melhores práticas de UI/UX</li>
+                <li>Desenvolvimento e manutenção de aplicações web SPA utilizando Vue.js 3, TypeScript e JavaScript</li>
+                <li>Criação de componentes reutilizáveis, responsivos e escaláveis, seguindo boas práticas de componentização e organização de código</li>
+                <li>Integração com APIs REST, consumo de dados em tempo real e tratamento de estados da aplicação</li>
+                <li>Colaboração com times de design e back-end para garantir performance, usabilidade e consistência da interface</li>
               </ul>
             </div>
           </article>
 
+          <div style="height: 3rem;"></div>
+
           <article class="experience__item">
             <div class="experience__period">
-              <span class="period__date">2022 - 2023</span>
+              <span class="period__date">2024 - 2025</span>
               <span class="period__duration">1 ano e 6 meses</span>
             </div>
             <div class="experience__content">
               <h3 class="experience__title">Desenvolvedor Front-End</h3>
-              <p class="experience__company">Visto Sistemas</p>
+              <p class="experience__company">Moovefy</p>
               <ul class="experience__achievements">
-                <li>Desenvolvimento e manutenção de sistemas web utilizando Vue.js, JavaScript, HTML e CSS</li>
-                <li>Criação de componentes reutilizáveis e arquitetura de aplicações escaláveis</li>
-                <li>Integração com APIs RESTful e garantia de excelente experiência do usuário</li>
+                <li>Desenvolvimento e manutenção de aplicações web utilizando Blazor, React.js, C# e JavaScript</li>
+                <li>Criação de componentes reutilizáveis e interfaces responsivas, com foco em usabilidade e padronização visual</li>
+                <li>Integração com APIs REST e otimização de desempenho das aplicações</li>
+                <li>Colaboração com equipes de design e back-end no desenvolvimento de soluções web</li>
+              </ul>
+            </div>
+          </article>
+
+          <div style="height: 3rem;"></div>
+
+          <article class="experience__item">
+            <div class="experience__period">
+              <span class="period__date">2022 - 2023</span>
+              <span class="period__duration">10 meses</span>
+            </div>
+            <div class="experience__content">
+              <h3 class="experience__title">Desenvolvedor Web Front-End</h3>
+              <p class="experience__company">OnFriday Technologies</p>
+              <ul class="experience__achievements">
+                <li>Desenvolvimento e manutenção de aplicações web utilizando Blazor, React.js, C# e JavaScript</li>
+                <li>Criação de componentes reutilizáveis e interfaces responsivas, com foco em usabilidade e padronização visual</li>
+                <li>Integração com APIs REST e otimização de desempenho das aplicações</li>
+                <li>Colaboração com equipes de design e back-end no desenvolvimento de soluções web</li>
               </ul>
             </div>
           </article>
@@ -93,7 +120,9 @@
               roteamento e gerenciamento de estado com Pinia.</p>
 
             <div class="skill__bar skill--large" data-value="92">
-              <div class="skill__progress" style="width:92%; background: linear-gradient(90deg, rgba(220, 38, 38, 0.8), rgba(239, 68, 68, 0.6));"></div>
+              <div class="skill__progress"
+                style="width:92%; background: linear-gradient(90deg, rgba(220, 38, 38, 0.8), rgba(239, 68, 68, 0.6));">
+              </div>
             </div>
             <div class="vue-card__meta">
               <span class="meta-pill"><i class="pi pi-check"></i>Composition API</span>
@@ -113,7 +142,9 @@
                 </div>
               </div>
               <div class="skill__bar skill--small">
-                <div class="skill__progress" style="width:95%; background: linear-gradient(90deg, rgba(220, 38, 38, 0.8), rgba(239, 68, 68, 0.6));"></div>
+                <div class="skill__progress"
+                  style="width:95%; background: linear-gradient(90deg, rgba(220, 38, 38, 0.8), rgba(239, 68, 68, 0.6));">
+                </div>
               </div>
             </div>
 
@@ -126,7 +157,9 @@
                 </div>
               </div>
               <div class="skill__bar skill--small">
-                <div class="skill__progress" style="width:93%; background: linear-gradient(90deg, rgba(220, 38, 38, 0.8), rgba(239, 68, 68, 0.6));"></div>
+                <div class="skill__progress"
+                  style="width:93%; background: linear-gradient(90deg, rgba(220, 38, 38, 0.8), rgba(239, 68, 68, 0.6));">
+                </div>
               </div>
             </div>
 
@@ -139,7 +172,9 @@
                 </div>
               </div>
               <div class="skill__bar skill--small">
-                <div class="skill__progress" style="width:88%; background: linear-gradient(90deg, rgba(220, 38, 38, 0.8), rgba(239, 68, 68, 0.6));"></div>
+                <div class="skill__progress"
+                  style="width:88%; background: linear-gradient(90deg, rgba(220, 38, 38, 0.8), rgba(239, 68, 68, 0.6));">
+                </div>
               </div>
             </div>
           </div>
@@ -174,11 +209,13 @@
             </div>
             <p class="project__description">{{ project.description }}</p>
             <div class="project__links">
-              <a v-if="project.demo" :href="project.demo" class="project__link project__link--demo" target="_blank" rel="noopener noreferrer">
+              <a v-if="project.demo" :href="project.demo" class="project__link project__link--demo" target="_blank"
+                rel="noopener noreferrer">
                 <span>Ver Demo</span>
                 <i class="pi pi-external-link"></i>
               </a>
-              <a :href="project.repo" class="project__link project__link--repo" target="_blank" rel="noopener noreferrer">
+              <a :href="project.repo" class="project__link project__link--repo" target="_blank"
+                rel="noopener noreferrer">
                 <span>Código</span>
                 <i class="pi pi-github"></i>
               </a>
@@ -286,9 +323,19 @@ import { featuredProjects } from '@/data/projects'
 }
 
 @keyframes float {
-  0%, 100% { transform: translate(0, 0) rotate(0deg); }
-  33% { transform: translate(30px, -30px) rotate(120deg); }
-  66% { transform: translate(-20px, 20px) rotate(240deg); }
+
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  33% {
+    transform: translate(30px, -30px) rotate(120deg);
+  }
+
+  66% {
+    transform: translate(-20px, 20px) rotate(240deg);
+  }
 }
 
 .hero__content {
@@ -389,9 +436,19 @@ import { featuredProjects } from '@/data/projects'
 }
 
 @keyframes float-reverse {
-  0%, 100% { transform: translate(0, 0) rotate(0deg); }
-  33% { transform: translate(-20px, 30px) rotate(-120deg); }
-  66% { transform: translate(30px, -20px) rotate(-240deg); }
+
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  33% {
+    transform: translate(-20px, 30px) rotate(-120deg);
+  }
+
+  66% {
+    transform: translate(30px, -20px) rotate(-240deg);
+  }
 }
 
 .about__content p {
@@ -456,6 +513,8 @@ import { featuredProjects } from '@/data/projects'
   width: 120px;
   text-align: right;
   padding-top: 0.5rem;
+
+  padding-right: 0.3rem;
 }
 
 .period__date {
@@ -561,8 +620,17 @@ import { featuredProjects } from '@/data/projects'
 }
 
 @keyframes pulse {
-  0%, 100% { transform: scale(1); opacity: 0.5; }
-  50% { transform: scale(1.1); opacity: 0.8; }
+
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
 }
 
 .skills__subtitle {
@@ -1257,7 +1325,11 @@ import { featuredProjects } from '@/data/projects'
     margin-bottom: 2rem;
   }
 
-  .about, .skills, .projects, .experience, .contact {
+  .about,
+  .skills,
+  .projects,
+  .experience,
+  .contact {
     margin: 1rem;
     border-radius: 16px;
   }
@@ -1269,58 +1341,60 @@ import { featuredProjects } from '@/data/projects'
 
   .experience__timeline {
     gap: 2rem;
-  .skills-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
 
-  .vue-card {
-    padding: 1.2rem;
-  }
+    .skills-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
 
-  .vue-card__logo {
-    width: 64px;
-    height: 64px;
-    margin-bottom: 0.4rem;
-  }
+    .vue-card {
+      padding: 1.2rem;
+    }
 
-  .vue-card__title {
-    font-size: 1.1rem;
-  }
+    .vue-card__logo {
+      width: 64px;
+      height: 64px;
+      margin-bottom: 0.4rem;
+    }
 
-  .vue-card__desc {
-    font-size: 0.9rem;
-    margin-bottom: 0.6rem;
-  }
+    .vue-card__title {
+      font-size: 1.1rem;
+    }
 
-  .meta-pill {
-    font-size: 0.75rem;
-    padding: 0.2rem 0.4rem;
-  }
+    .vue-card__desc {
+      font-size: 0.9rem;
+      margin-bottom: 0.6rem;
+    }
 
-  .tech-cards {
-    gap: 0.8rem;
-  }
+    .meta-pill {
+      font-size: 0.75rem;
+      padding: 0.2rem 0.4rem;
+    }
 
-  .tech-card {
-    padding: 0.7rem;
-  }
+    .tech-cards {
+      gap: 0.8rem;
+    }
 
-  .tech-logo {
-    font-size: 24px;
-  }
+    .tech-card {
+      padding: 0.7rem;
+    }
 
-  .tech-card__name {
-    font-size: 0.95rem;
-  }
+    .tech-logo {
+      font-size: 24px;
+    }
 
-  .tech-card__sub {
-    font-size: 0.8rem;
-  }
+    .tech-card__name {
+      font-size: 0.95rem;
+    }
 
-  .skill__bar.large {
-    height: 10px;
-  }
+    .tech-card__sub {
+      font-size: 0.8rem;
+    }
+
+    .skill__bar.large {
+      height: 10px;
+    }
+
     gap: 0.5rem;
   }
 
@@ -1455,7 +1529,11 @@ import { featuredProjects } from '@/data/projects'
     margin-bottom: 1.5rem;
   }
 
-  .about, .skills, .projects, .experience, .contact {
+  .about,
+  .skills,
+  .projects,
+  .experience,
+  .contact {
     margin: 1rem;
     border-radius: 12px;
   }
@@ -1475,7 +1553,7 @@ import { featuredProjects } from '@/data/projects'
 
   .experience__period {
     width: 60px;
-  font-size: 0.8rem;
+    font-size: 0.8rem;
   }
 
   .experience__content {
