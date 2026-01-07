@@ -32,6 +32,16 @@ export const projects: Project[] = [
     featured: true
   },
   {
+    id: 4,
+    title: 'tic-tack',
+    description: 'Aplicativo React de timer multi-função com contador, cronômetro, contagem regressiva e múltiplos contadores.',
+    repo: 'https://github.com/maranzatto/tic-tack',
+    demo: 'https://maranzatto.github.io/tic-tack/',
+    language: 'React',
+    updatedAt: '3 semanas atrás',
+    featured: true
+  },
+  {
     id: 3,
     title: 'calculadoraJS',
     description: 'Calculadora funcional desenvolvida com HTML, CSS e JavaScript puro, demonstrando conceitos fundamentais de programação web.',
