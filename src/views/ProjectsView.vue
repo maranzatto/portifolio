@@ -2,18 +2,33 @@
   <div class="projects-page">
     <section class="section projects">
       <div class="container">
-        <h2 class="section__title">Projetos</h2>
+        <h2 class="section__title">Todos os Projetos</h2>
 
         <div class="projects__grid">
           <article class="project__card" v-for="project in projects" :key="project.id">
-            <div class="project__header">{{ project.title }}</div>
+            <div class="project__header">
+              <h3>{{ project.title }}</h3>
+              <div class="project__meta">
+                <span class="tech-tag">{{ project.language || 'Misc' }}</span>
+                <span v-if="project.stars" class="stars-tag">⭐ {{ project.stars }}</span>
+              </div>
+            </div>
             <p class="project__description">{{ project.description }}</p>
-            <a :href="project.repo" class="project__link" target="_blank" rel="noopener noreferrer">Ver Mais →</a>
+            <div class="project__links">
+              <a v-if="project.demo" :href="project.demo" class="project__link project__link--demo" target="_blank" rel="noopener noreferrer">
+                <span>Ver Demo</span>
+                <i class="pi pi-external-link"></i>
+              </a>
+              <a :href="project.repo" class="project__link project__link--repo" target="_blank" rel="noopener noreferrer">
+                <span>Código</span>
+                <i class="pi pi-github"></i>
+              </a>
+            </div>
           </article>
         </div>
 
         <div class="projects__more">
-          <router-link to="/" class="project__more-btn">Voltar para Home</router-link>
+          <router-link to="/" class="project__more-btn">Voltar para Início</router-link>
         </div>
       </div>
     </section>
@@ -21,21 +36,31 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { allProjects } from '@/data/projects'
 
-const projects = ref([
-  { id: 1, title: 'Projeto 1', description: 'Descrição do projeto 1. Um projeto incrível que demonstra minhas habilidades.', repo: 'https://github.com/seu-usuario/projeto-1' },
-  { id: 2, title: 'Projeto 2', description: 'Descrição do projeto 2. Outro projeto fascinante que realizei.', repo: 'https://github.com/seu-usuario/projeto-2' },
-  { id: 3, title: 'Projeto 3', description: 'Descrição do projeto 3. Um mais um dos meus trabalhos em destaque.', repo: 'https://github.com/seu-usuario/projeto-3' },
-  { id: 4, title: 'Projeto 4', description: 'Exemplo adicional para testes de layout.', repo: '#' },
-  { id: 5, title: 'Projeto 5', description: 'Exemplo adicional para testes de layout.', repo: '#' },
-  { id: 6, title: 'Projeto 6', description: 'Exemplo adicional para testes de layout.', repo: '#' },
-])
+const projects = allProjects
 </script>
 
 <style scoped>
 .projects {
-  background: var(--color-bg-primary);
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(10px);
+  border-radius: 24px;
+  margin: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.projects::before {
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  right: -30%;
+  width: 60%;
+  height: 60%;
+  background: radial-gradient(circle, rgba(220, 38, 38, 0.03) 0%, transparent 70%);
+  animation: float 30s ease-in-out infinite;
 }
 
 .section {
@@ -52,7 +77,7 @@ const projects = ref([
 .section__title {
   font-size: 2.5rem;
   font-weight: bold;
-  color: var(--color-primary);
+  color: rgba(220, 38, 38, 0.9);
   margin-bottom: 3rem;
   text-align: center;
 }
@@ -64,42 +89,130 @@ const projects = ref([
 }
 
 .project__card {
-  background: var(--color-bg-secondary);
+  background: rgba(255, 255, 255, 0.03);
   padding: 2rem;
-  border-radius: 0.5rem;
-  border-top: 4px solid var(--color-primary);
-  transition: all 0.3s ease;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.project__card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, rgba(220, 38, 38, 0.8), rgba(239, 68, 68, 0.6));
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+}
+
+.project__card:hover::before {
+  transform: scaleX(1);
 }
 
 .project__card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  border-color: rgba(220, 38, 38, 0.3);
 }
 
 .project__header {
-  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.project__header h3 {
+  font-size: 1.3rem;
   font-weight: 700;
-  color: var(--color-primary);
-  margin-bottom: 1rem;
+  color: rgba(220, 38, 38, 0.9);
+  margin: 0 0 0.75rem 0;
+  line-height: 1.2;
+}
+
+.project__meta {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tech-tag {
+  font-size: 0.75rem;
+  padding: 0.3rem 0.6rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--color-text-secondary);
+  border-radius: 20px;
+  font-weight: 500;
+  backdrop-filter: blur(10px);
+}
+
+.stars-tag {
+  font-size: 0.75rem;
+  padding: 0.3rem 0.6rem;
+  background: rgba(251, 191, 36, 0.2);
+  color: #fbbf24;
+  border-radius: 20px;
+  font-weight: 500;
 }
 
 .project__description {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: var(--color-text-secondary);
+  line-height: 1.6;
   margin-bottom: 1.5rem;
   flex-grow: 1;
 }
 
-.project__link {
-  color: var(--color-primary);
-  text-decoration: none;
-  font-weight: 600;
+.project__links {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: auto;
 }
 
-.project__link:hover {
-  color: var(--color-primary-dark);
+.project__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  flex: 1;
+  justify-content: center;
+}
+
+.project__link i {
+  font-size: 0.9rem;
+}
+
+.project__link--demo {
+  background: linear-gradient(135deg, rgba(220, 38, 38, 0.9), rgba(239, 68, 68, 0.8));
+  color: white;
+}
+
+.project__link--demo:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project__link--repo {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--color-text-secondary);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.project__link--repo:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(220, 38, 38, 0.4);
+  color: rgba(220, 38, 38, 0.9);
 }
 
 .projects__more {
@@ -109,13 +222,38 @@ const projects = ref([
 }
 
 .project__more-btn {
-  display: inline-block;
-  padding: 0.9rem 1.4rem;
-  background: var(--color-primary);
-  color: var(--color-text-inverse);
-  border-radius: 10px;
-  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, rgba(220, 38, 38, 0.9), rgba(239, 68, 68, 0.8));
+  color: white;
+  border-radius: 12px;
+  font-weight: 600;
   text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.project__more-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: left 0.5s ease;
+}
+
+.project__more-btn:hover::before {
+  left: 100%;
+}
+
+.project__more-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(220, 38, 38, 0.3);
 }
 
 @media (max-width: 768px) {
@@ -124,7 +262,7 @@ const projects = ref([
   }
 
   .projects__grid {
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    grid-template-columns: 1fr;
     gap: 1.2rem;
   }
 
@@ -142,8 +280,14 @@ const projects = ref([
     margin-bottom: 1rem;
   }
 
+  .project__links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
   .project__link {
     font-size: 0.95rem;
+    padding: 0.6rem 1rem;
   }
 
   .project__more-btn {

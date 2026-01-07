@@ -54,7 +54,7 @@ onUnmounted(() => {
 <template>
   <header :class="['header', { 'header--scrolled': isScrolled }]">
     <div class="header__container">
-      <router-link to="/" class="header__logo" @click="closeMenu">Portfólio</router-link>
+      <router-link to="/" class="header__logo" @click="closeMenu">Amitael Maranzatto</router-link>
       <button class="header__toggle" @click="toggleMenu" :class="{ 'header__toggle--active': menuOpen }"
         :aria-expanded="menuOpen" aria-label="Toggle menu">
         <span></span>
@@ -62,8 +62,9 @@ onUnmounted(() => {
         <span></span>
       </button>
       <nav :class="['header__nav', { 'header__nav--open': menuOpen }]" @click="closeMenu">
-        <a href="javascript:void(0)" @click.stop="navigateToSection('hero')" class="header__link">Home</a>
+        <a href="javascript:void(0)" @click.stop="navigateToSection('hero')" class="header__link">Início</a>
         <a href="javascript:void(0)" @click.stop="navigateToSection('about')" class="header__link">Sobre</a>
+        <a href="javascript:void(0)" @click.stop="navigateToSection('experience')" class="header__link">Experiência</a>
         <a href="javascript:void(0)" @click.stop="navigateToSection('skills')" class="header__link">Habilidades</a>
         <a href="javascript:void(0)" @click.stop="navigateToProjects" class="header__link">Projetos</a>
         <a href="javascript:void(0)" @click.stop="navigateToSection('contact')" class="header__link">Contato</a>
@@ -99,22 +100,38 @@ onUnmounted(() => {
   color: var(--color-header-text);
   text-decoration: none;
   z-index: 1001;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.header__logo:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-1px);
 }
 
 .header__toggle {
   display: none;
   flex-direction: column;
   gap: 4px;
-  background: none;
-  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   cursor: pointer;
   z-index: 1001;
   padding: 0.5rem;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   width: 32px;
   height: 26px;
   justify-content: center;
   align-items: flex-start;
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+}
+
+.header__toggle:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .header__toggle span {
@@ -164,24 +181,58 @@ onUnmounted(() => {
 .header__link {
   color: var(--color-header-text);
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   font-size: 1rem;
   white-space: nowrap;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.header__link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
+  transition: left 0.4s ease;
+  border-radius: 8px;
+}
+
+.header__link:hover::before {
+  left: 100%;
 }
 
 .header__link:hover {
-  color: var(--color-header-link-hover);
+  color: rgba(220, 38, 38, 0.9);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Estado scrollado - header com background flutuante */
 .header--scrolled {
-  background-color: var(--color-header-bg);
-  backdrop-filter: blur(10px);
+  background: linear-gradient(135deg, rgba(30, 30, 40, 0.95), rgba(40, 40, 55, 0.9));
+  backdrop-filter: blur(20px);
   margin: 1rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   left: 1rem;
   right: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header--scrolled .header__link {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.header--scrolled .header__link:hover {
+  color: rgba(220, 38, 38, 0.95);
+  background: rgba(255, 255, 255, 0.15);
 }
 
 .header--scrolled .header__container {
@@ -230,6 +281,8 @@ onUnmounted(() => {
     padding: 1rem 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     font-size: 1.1rem;
+    width: 100%;
+    text-align: left;
   }
 
   .header__link:last-child {

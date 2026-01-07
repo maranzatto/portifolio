@@ -3,45 +3,83 @@
     <!-- Hero Section -->
     <section id="hero" class="section hero">
       <div class="hero__content">
-        <h1 class="hero__title">Criando Interfaces que Fazem Diferença</h1>
-        <p class="hero__subtitle">Desenvolvedor Front-End especializado em soluções modernas e responsivas.</p>
-        <a href="#projects" class="hero__cta">Ver Projetos</a>
+        <h1 class="hero__title">Desenvolvedor Front-End & Criativo Digital</h1>
+        <p class="hero__subtitle">Transformando ideias em experiências web excepcionais com código limpo e design intuitivo</p>
+        <a href="#projects" class="hero__cta">Explorar Meu Trabalho</a>
       </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="section about">
       <div class="container">
-        <h2 class="section__title">Sobre Mim</h2>
+        <h2 class="section__title">Minha Jornada</h2>
         <div class="about__content">
           <p>
-            Sou <strong>Desenvolvedor Front-End</strong> com <strong>3 anos de experiência</strong> criando interfaces
-            modernas,
-            performáticas e focadas em usabilidade. Trabalho com foco em entregar soluções limpas,
-            escaláveis e simples de manter.
+            Olá! Sou <strong>Amitael Maranzatto</strong>, um <strong>Desenvolvedor Front-End</strong> com <strong>3 anos de experiência</strong>
+            apaixonado por criar interfaces que não apenas funcionam bem, mas que encantam usuários. Minha missão é
+            transformar conceitos complexos em experiências digitais simples e memoráveis.
           </p>
 
           <p>
-            Minha principal stack inclui <strong>Vue 3</strong>, <strong>TypeScript</strong>,
-            <strong>JavaScript</strong>,
-            <strong>HTML</strong>, <strong>CSS</strong> e <strong>Tailwind</strong>, além de experiência sólida em
-            <strong>integração com APIs REST</strong>, criação de componentes reutilizáveis e estruturação de
-            aplicações.
+            Minha especialidade inclui <strong>Vue 3</strong>, <strong>TypeScript</strong>, <strong>JavaScript</strong> moderno e
+            <strong>CSS avançado</strong>. Tenho experiência sólida em <strong>arquitetura de componentes</strong>,
+            <strong>estado reativo</strong> com Pinia, e <strong>integração com APIs REST</strong>. Busco sempre escrever
+            código que seja não apenas funcional, mas também mantível e escalável.
           </p>
 
           <p>
-            Prezo por código organizado, boas práticas, atenção aos detalhes e performance. Meu objetivo é
-            transformar ideias em interfaces funcionais, eficientes e com excelente experiência para o usuário.
+            Fora do código, sou curioso por natureza e estou sempre aprendendo novas tecnologias e tendências de design.
+            Acredito que os melhores produtos nascem da colaboração entre desenvolvimento e design, e busco sempre
+            essa sinergia em todos os projetos que participo.
           </p>
         </div>
       </div>
     </section>
+    <!-- Experience Section -->
+    <section id="experience" class="section experience">
+      <div class="container">
+        <h2 class="section__title">Experiência Profissional</h2>
 
+        <div class="experience__timeline">
+          <article class="experience__item">
+            <div class="experience__period">
+              <span class="period__date">2023 - Presente</span>
+              <span class="period__duration">6 meses</span>
+            </div>
+            <div class="experience__content">
+              <h3 class="experience__title">Desenvolvedor Front-End Autônomo</h3>
+              <p class="experience__company">Amitael Maranzatto</p>
+              <ul class="experience__achievements">
+                <li>Desenvolvimento e manutenção de interfaces responsivas e interativas com Vue.js, TypeScript e JavaScript</li>
+                <li>Colaboração com equipes de design e back-end para integração de APIs e funcionalidade completa</li>
+                <li>Otimização de desempenho e usabilidade aplicando melhores práticas de UI/UX</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="experience__item">
+            <div class="experience__period">
+              <span class="period__date">2022 - 2023</span>
+              <span class="period__duration">1 ano e 6 meses</span>
+            </div>
+            <div class="experience__content">
+              <h3 class="experience__title">Desenvolvedor Front-End</h3>
+              <p class="experience__company">Visto Sistemas</p>
+              <ul class="experience__achievements">
+                <li>Desenvolvimento e manutenção de sistemas web utilizando Vue.js, JavaScript, HTML e CSS</li>
+                <li>Criação de componentes reutilizáveis e arquitetura de aplicações escaláveis</li>
+                <li>Integração com APIs RESTful e garantia de excelente experiência do usuário</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
     <!-- Skills Section -->
     <section id="skills" class="section skills">
       <div class="container">
-        <h2 class="section__title">Habilidades Front-end</h2>
+        <h2 class="section__title">Stack Tecnológico</h2>
 
         <div class="skills-grid">
           <!-- Vue Spotlight -->
@@ -55,7 +93,7 @@
               roteamento e gerenciamento de estado com Pinia.</p>
 
             <div class="skill__bar skill--large" data-value="92">
-              <div class="skill__progress" style="width:92%"></div>
+              <div class="skill__progress" style="width:92%; background: linear-gradient(90deg, rgba(220, 38, 38, 0.8), rgba(239, 68, 68, 0.6));"></div>
             </div>
             <div class="vue-card__meta">
               <span class="meta-pill"><i class="pi pi-check"></i>Composition API</span>
@@ -75,7 +113,7 @@
                 </div>
               </div>
               <div class="skill__bar skill--small">
-                <div class="skill__progress" style="width:95%"></div>
+                <div class="skill__progress" style="width:95%; background: linear-gradient(90deg, rgba(220, 38, 38, 0.8), rgba(239, 68, 68, 0.6));"></div>
               </div>
             </div>
 
@@ -88,11 +126,11 @@
                 </div>
               </div>
               <div class="skill__bar skill--small">
-                <div class="skill__progress" style="width:93%"></div>
+                <div class="skill__progress" style="width:93%; background: linear-gradient(90deg, rgba(220, 38, 38, 0.8), rgba(239, 68, 68, 0.6));"></div>
               </div>
             </div>
 
-            <div class="tech-card">
+            <div class="tech-card m-">
               <div class="tech-card__head">
                 <IconTypescript class="tech-logo" aria-hidden="true" />
                 <div class="tech-card__info">
@@ -101,7 +139,7 @@
                 </div>
               </div>
               <div class="skill__bar skill--small">
-                <div class="skill__progress" style="width:88%"></div>
+                <div class="skill__progress" style="width:88%; background: linear-gradient(90deg, rgba(220, 38, 38, 0.8), rgba(239, 68, 68, 0.6));"></div>
               </div>
             </div>
           </div>
@@ -124,32 +162,31 @@
     <!-- Projects Section -->
     <section id="projects" class="section projects">
       <div class="container">
-        <h2 class="section__title">Projetos</h2>
+        <h2 class="section__title">Projetos em Destaque</h2>
         <div class="projects__grid">
-          <article class="project__card">
-            <div class="project__header">Projeto 1</div>
-            <p class="project__description">
-              Descrição do projeto 1. Um projeto incrível que demonstra minhas habilidades.
-            </p>
-            <a href="#" class="project__link">Ver Mais →</a>
-          </article>
-          <article class="project__card">
-            <div class="project__header">Projeto 2</div>
-            <p class="project__description">
-              Descrição do projeto 2. Outro projeto fascinante que realizei.
-            </p>
-            <a href="#" class="project__link">Ver Mais →</a>
-          </article>
-          <article class="project__card">
-            <div class="project__header">Projeto 3</div>
-            <p class="project__description">
-              Descrição do projeto 3. Um mais um dos meus trabalhos em destaque.
-            </p>
-            <a href="#" class="project__link">Ver Mais →</a>
+          <article class="project__card" v-for="project in featuredProjects" :key="project.id">
+            <div class="project__header">
+              <h3>{{ project.title }}</h3>
+              <div class="project__meta">
+                <span class="tech-tag">{{ project.language }}</span>
+                <span v-if="project.stars" class="stars-tag">⭐ {{ project.stars }}</span>
+              </div>
+            </div>
+            <p class="project__description">{{ project.description }}</p>
+            <div class="project__links">
+              <a v-if="project.demo" :href="project.demo" class="project__link project__link--demo" target="_blank" rel="noopener noreferrer">
+                <span>Ver Demo</span>
+                <i class="pi pi-external-link"></i>
+              </a>
+              <a :href="project.repo" class="project__link project__link--repo" target="_blank" rel="noopener noreferrer">
+                <span>Código</span>
+                <i class="pi pi-github"></i>
+              </a>
+            </div>
           </article>
         </div>
         <div class="projects__more">
-          <router-link to="/projects" class="project__more-btn">Ver Mais Projetos</router-link>
+          <router-link to="/projects" class="project__more-btn">Ver Todos os Projetos</router-link>
         </div>
       </div>
     </section>
@@ -157,19 +194,19 @@
     <!-- Contact Section -->
     <section id="contact" class="section contact">
       <div class="container">
-        <h2 class="section__title">Entre em Contato</h2>
-        <p class="contact__subtitle">Vamos trabalhar juntos em algo incrível!</p>
+        <h2 class="section__title">Vamos Conversar?</h2>
+        <p class="contact__subtitle">Aberto a novas oportunidades e colaborações emocionantes!</p>
 
         <div class="contact__content">
           <div class="contact__email">
-            <p class="contact__email-label">Envie-me um email:</p>
+            <p class="contact__email-label">Me envie um email:</p>
             <a href="mailto:amitael.jau@gmail.com" class="contact__email-link">amitael.jau@gmail.com</a>
           </div>
 
           <div class="contact__divider">ou</div>
 
           <div class="contact__social">
-            <p class="contact__social-label">Conecte-se em redes sociais:</p>
+            <p class="contact__social-label">Conecte-se comigo:</p>
             <div class="social__links">
               <a href="https://github.com/maranzatto" target="_blank" rel="noopener noreferrer"
                 class="social__link github">
@@ -189,7 +226,7 @@
           </div>
         </div>
 
-        <p class="contact__footer">Obrigado por visitar! Espero ouvir de você em breve.</p>
+        <p class="contact__footer">Obrigado pela visita! Fico à disposição para criar algo incrível juntos.</p>
       </div>
     </section>
   </div>
@@ -203,7 +240,7 @@ import IconNext from '@/assets/icons/IconNext.vue';
 import IconReact from '@/assets/icons/IconReact.vue';
 import IconTypescript from '@/assets/icons/IconTypescript.vue';
 import IconVue from '@/assets/icons/IconVue.vue';
-
+import { featuredProjects } from '@/data/projects'
 </script>
 
 <style scoped>
@@ -213,28 +250,52 @@ import IconVue from '@/assets/icons/IconVue.vue';
 
 .section {
   scroll-margin-top: 80px;
+  position: relative;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
+  position: relative;
+  z-index: 2;
 }
 
 /* Hero Section */
 .hero {
   min-height: 100vh;
-  background: var(--gradient-primary);
+  background: linear-gradient(135deg, var(--gradient-primary), transparent);
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 2rem;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+  animation: float 20s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  33% { transform: translate(30px, -30px) rotate(120deg); }
+  66% { transform: translate(-20px, 20px) rotate(240deg); }
 }
 
 .hero__content {
   max-width: 720px;
   color: var(--color-text-inverse);
+  position: relative;
+  z-index: 2;
 }
 
 .hero__title {
@@ -254,36 +315,83 @@ import IconVue from '@/assets/icons/IconVue.vue';
 .hero__cta {
   display: inline-block;
   padding: 1rem 2rem;
-  background: var(--color-text-inverse);
-  color: var(--color-primary);
-  border-radius: 0.5rem;
+  background: linear-gradient(135deg, rgba(220, 38, 38, 0.8), rgba(239, 68, 68, 0.7));
+  backdrop-filter: blur(10px);
+  color: var(--color-text-inverse);
+  border-radius: 12px;
   text-decoration: none;
   font-weight: 600;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(220, 38, 38, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero__cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: left 0.4s ease;
+}
+
+.hero__cta:hover::before {
+  left: 100%;
 }
 
 .hero__cta:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(220, 38, 38, 0.3);
+  background: linear-gradient(135deg, rgba(220, 38, 38, 0.85), rgba(239, 68, 68, 0.75));
 }
 
 /* Section Styles */
 .section {
-  padding: 6rem 0;
-  /* border-bottom: 1px solid var(--color-gray-200); */
+  scroll-margin-top: 80px;
+  position: relative;
+  padding: 4rem 0;
 }
 
 .section__title {
   font-size: 2.5rem;
   font-weight: bold;
-  color: var(--color-primary);
+  background: linear-gradient(135deg, rgba(220, 38, 38, 0.9), rgba(239, 68, 68, 0.7));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   margin-bottom: 3rem;
   text-align: center;
 }
 
 /* About Section */
 .about {
-  background: var(--color-bg-primary);
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(10px);
+  border-radius: 24px;
+  margin: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.about::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(120, 119, 198, 0.05) 0%, transparent 70%);
+  animation: float-reverse 25s ease-in-out infinite;
+}
+
+@keyframes float-reverse {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  33% { transform: translate(-20px, 30px) rotate(-120deg); }
+  66% { transform: translate(30px, -20px) rotate(-240deg); }
 }
 
 .about__content p {
@@ -296,10 +404,165 @@ import IconVue from '@/assets/icons/IconVue.vue';
   margin-right: auto;
 }
 
+/* Experience Section */
+.experience {
+  background: linear-gradient(135deg, rgba(220, 38, 38, 0.02), rgba(255, 255, 255, 0.02));
+  backdrop-filter: blur(12px);
+  border-radius: 24px;
+  margin: 2rem;
+  border: 1px solid rgba(220, 38, 38, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.experience::before {
+  content: '';
+  position: absolute;
+  top: -40%;
+  left: -40%;
+  width: 80%;
+  height: 80%;
+  background: radial-gradient(circle, rgba(220, 38, 38, 0.03) 0%, transparent 70%);
+  animation: float-reverse 28s ease-in-out infinite;
+}
+
+.experience__timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  position: relative;
+  z-index: 2;
+}
+
+.experience__timeline::before {
+  content: '';
+  position: absolute;
+  left: 120px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, rgba(220, 38, 38, 0.8), transparent);
+  border-radius: 1px;
+}
+
+.experience__item {
+  display: flex;
+  gap: 2rem;
+  position: relative;
+}
+
+.experience__period {
+  flex-shrink: 0;
+  width: 120px;
+  text-align: right;
+  padding-top: 0.5rem;
+}
+
+.period__date {
+  display: block;
+  font-weight: 600;
+  color: rgba(220, 38, 38, 0.85);
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+}
+
+.period__duration {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+  opacity: 0.8;
+}
+
+.experience__content {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+}
+
+.experience__content::before {
+  content: '';
+  position: absolute;
+  left: -9px;
+  top: 2rem;
+  width: 16px;
+  height: 16px;
+  background: linear-gradient(135deg, rgba(220, 38, 38, 0.9), rgba(239, 68, 68, 0.8));
+  border-radius: 50%;
+  border: 3px solid var(--color-bg-secondary);
+  box-shadow: 0 0 0 4px rgba(220, 38, 38, 0.2);
+}
+
+.experience__title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: rgba(220, 38, 38, 0.9);
+  margin: 0 0 0.5rem 0;
+}
+
+.experience__company {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  margin: 0 0 1.5rem 0;
+  font-weight: 500;
+}
+
+.experience__achievements {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.experience__achievements li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.8rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.experience__achievements li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: rgba(220, 38, 38, 0.8);
+  font-weight: bold;
+}
+
+.experience__achievements li:last-child {
+  margin-bottom: 0;
+}
+
 /* Skills Section - clean, focused on front-end (Vue spotlight) */
 .skills {
-  background: var(--color-bg-secondary);
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(15px);
   padding: 3.5rem 0 4rem;
+  border-radius: 24px;
+  margin: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.skills::before {
+  content: '';
+  position: absolute;
+  top: -30%;
+  left: -30%;
+  width: 60%;
+  height: 60%;
+  background: radial-gradient(circle, rgba(120, 219, 255, 0.05) 0%, transparent 70%);
+  animation: pulse 15s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(1.1); opacity: 0.8; }
 }
 
 .skills__subtitle {
@@ -471,7 +734,24 @@ import IconVue from '@/assets/icons/IconVue.vue';
 
 /* Projects Section */
 .projects {
-  background: var(--color-bg-primary);
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(10px);
+  border-radius: 24px;
+  margin: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.projects::before {
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  right: -30%;
+  width: 60%;
+  height: 60%;
+  background: radial-gradient(circle, rgba(255, 119, 198, 0.05) 0%, transparent 70%);
+  animation: float 30s ease-in-out infinite;
 }
 
 .projects__grid {
@@ -487,66 +767,188 @@ import IconVue from '@/assets/icons/IconVue.vue';
 }
 
 .project__more-btn {
-  display: inline-block;
-  padding: 0.9rem 1.4rem;
-  background: var(--color-primary);
-  color: var(--color-text-inverse);
-  border-radius: 10px;
-  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, rgba(220, 38, 38, 0.9), rgba(239, 68, 68, 0.8));
+  color: white;
+  border-radius: 12px;
+  font-weight: 600;
   text-decoration: none;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.project__more-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: left 0.5s ease;
+}
+
+.project__more-btn:hover::before {
+  left: 100%;
 }
 
 .project__more-btn:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 .project__card {
   background: var(--color-bg-secondary);
   padding: 2rem;
-  border-radius: 0.5rem;
-  border-top: 4px solid var(--color-primary);
-  transition: all 0.3s ease;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.project__card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, rgba(220, 38, 38, 0.8), rgba(239, 68, 68, 0.6));
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+}
+
+.project__card:hover::before {
+  transform: scaleX(1);
 }
 
 .project__card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border-color: rgba(220, 38, 38, 0.3);
 }
 
 .project__header {
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: var(--color-primary);
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.project__header h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: rgba(220, 38, 38, 0.9);
+  margin: 0 0 0.75rem 0;
+  line-height: 1.2;
+}
+
+.project__meta {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tech-tag {
+  font-size: 0.75rem;
+  padding: 0.3rem 0.6rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--color-text-secondary);
+  border-radius: 20px;
+  font-weight: 500;
+  backdrop-filter: blur(10px);
+}
+
+.stars-tag {
+  font-size: 0.75rem;
+  padding: 0.3rem 0.6rem;
+  background: rgba(251, 191, 36, 0.2);
+  color: #fbbf24;
+  border-radius: 20px;
+  font-weight: 500;
 }
 
 .project__description {
   font-size: 0.95rem;
   color: var(--color-text-secondary);
+  line-height: 1.6;
   margin-bottom: 1.5rem;
   flex-grow: 1;
 }
 
-.project__link {
-  color: var(--color-primary);
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
+.project__links {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: auto;
 }
 
-.project__link:hover {
-  color: var(--color-primary-dark);
+.project__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  flex: 1;
+  justify-content: center;
+}
+
+.project__link i {
+  font-size: 0.9rem;
+}
+
+.project__link--demo {
+  background: linear-gradient(135deg, rgba(220, 38, 38, 0.9), rgba(239, 68, 68, 0.8));
+  color: white;
+}
+
+.project__link--demo:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project__link--repo {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--color-text-secondary);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.project__link--repo:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(220, 38, 38, 0.4);
+  color: rgba(220, 38, 38, 0.9);
 }
 
 /* Contact Section */
 .contact {
-  background: var(--gradient-primary);
+  background: linear-gradient(135deg, var(--gradient-primary), rgba(120, 119, 198, 0.8));
   text-align: center;
   padding: 8rem 0;
+  border-radius: 24px;
+  margin: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+  animation: float-reverse 35s ease-in-out infinite;
 }
 
 .contact .section__title {
@@ -821,28 +1223,43 @@ import IconVue from '@/assets/icons/IconVue.vue';
 
 /* Responsive */
 @media (max-width: 768px) {
-  .hero__title {
-    font-size: 2rem;
-  }
-
-  .hero__subtitle {
-    font-size: 1rem;
-  }
-
-  .section__title {
-    font-size: 1.8rem;
-  }
-
   .section {
     padding: 3rem 0;
+    scroll-margin-top: 70px;
   }
 
   .container {
     padding: 0 1rem;
   }
 
-  .hero__content {
-    max-width: 100%;
+  .hero {
+    min-height: 80vh;
+    padding: 1rem;
+  }
+
+  .hero__title {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .hero__subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero__cta {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .section__title {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+
+  .about, .skills, .projects, .experience, .contact {
+    margin: 1rem;
+    border-radius: 16px;
   }
 
   .about__content p {
@@ -850,6 +1267,8 @@ import IconVue from '@/assets/icons/IconVue.vue';
     margin-bottom: 1.2rem;
   }
 
+  .experience__timeline {
+    gap: 2rem;
   .skills-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
@@ -902,9 +1321,46 @@ import IconVue from '@/assets/icons/IconVue.vue';
   .skill__bar.large {
     height: 10px;
   }
+    gap: 0.5rem;
+  }
+
+  .project__link {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+
+  .contact {
+    padding: 4rem 0;
+  }
+
+  .contact__content {
+    padding: 2rem 1rem;
+  }
+
+  .contact__email-link {
+    font-size: 1.1rem;
+  }
+
+  .social__links {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .social__link {
+    width: 100%;
+    justify-content: center;
+  }
 
   .skills-tools {
     gap: 0.5rem;
+  }
+
+  .contact__email-link {
+    font-size: 1.2rem;
+  }
+
+  .social__links {
+    gap: 0.8rem;
   }
 
   .tool {
@@ -965,209 +1421,135 @@ import IconVue from '@/assets/icons/IconVue.vue';
 }
 
 @media (max-width: 480px) {
-  .hero {
-    min-height: 80vh;
-    padding: 1rem;
-  }
-
-  .hero__title {
-    font-size: 1.5rem;
-    margin-bottom: 0.8rem;
-  }
-
-  .hero__subtitle {
-    font-size: 0.95rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .hero__cta {
-    padding: 0.8rem 1.5rem;
-    font-size: 0.95rem;
-  }
-
   .section {
     padding: 2rem 0;
     scroll-margin-top: 60px;
-  }
-
-  .section__title {
-    font-size: 1.3rem;
-    margin-bottom: 1.5rem;
   }
 
   .container {
     padding: 0 0.75rem;
   }
 
-  .about__content p {
-    font-size: 0.9rem;
-    line-height: 1.6;
-    margin-bottom: 1rem;
-  }
-
-  /* Skills section mobile */
-  .skills {
-    padding: 1.5rem 0;
-  }
-
-  .skills-grid {
-    gap: 1rem;
-  }
-
-  .vue-card {
+  .hero {
+    min-height: 70vh;
     padding: 1rem;
-    box-shadow: 0 4px 16px rgba(2, 6, 23, 0.2);
   }
 
-  .vue-card__logo {
-    width: 48px;
-    height: 48px;
-    margin-bottom: 0.5rem;
-  }
-
-  .vue-card__title {
-    font-size: 1rem;
-    margin: 0.1rem 0 0.3rem;
-  }
-
-  .vue-card__desc {
-    font-size: 0.8rem;
-    line-height: 1.4;
+  .hero__title {
+    font-size: 1.5rem;
     margin-bottom: 0.6rem;
   }
 
-  .meta-pill {
-    font-size: 0.65rem;
-    padding: 0.15rem 0.25rem;
-  }
-
-  .tech-cards {
-    gap: 0.6rem;
-  }
-
-  .tech-card {
-    padding: 0.6rem;
-  }
-
-  .tech-card__head {
-    gap: 0.5rem;
-    margin-bottom: 0.4rem;
-  }
-
-  .tech-logo {
-    font-size: 18px;
-  }
-
-  .tech-card__name {
+  .hero__subtitle {
     font-size: 0.85rem;
-    font-weight: 600;
+    margin-bottom: 1rem;
   }
 
-  .tech-card__sub {
-    font-size: 0.75rem;
-    line-height: 1.3;
+  .hero__cta {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.85rem;
   }
 
-  .skill__bar {
-    margin-top: 0.3rem;
+  .section__title {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
   }
 
-  .skill--large {
-    height: 8px;
+  .about, .skills, .projects, .experience, .contact {
+    margin: 1rem;
+    border-radius: 12px;
   }
 
-  .skill--small {
-    height: 6px;
+  .about__content p {
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
   }
 
-  .skills-tools {
-    margin-top: 0.7rem;
-    gap: 0.35rem;
+  .experience__timeline {
+    gap: 1.5rem;
   }
 
-  .tool {
-    font-size: 0.7rem;
-    padding: 0.25rem 0.4rem;
-    gap: 0.2rem;
+  .experience__timeline::before {
+    left: 60px;
   }
 
-  /* Projects section mobile */
+  .experience__period {
+    width: 60px;
+  font-size: 0.8rem;
+  }
+
+  .experience__content {
+    padding: 1rem;
+  }
+
+  .experience__content::before {
+    left: -7px;
+    width: 12px;
+    height: 12px;
+  }
+
+  .experience__title {
+    font-size: 1rem;
+  }
+
+  .experience__company {
+    font-size: 0.9rem;
+  }
+
+  .experience__achievements li {
+    font-size: 0.8rem;
+    margin-bottom: 0.6rem;
+  }
+
   .projects__grid {
+    grid-template-columns: 1fr;
     gap: 1rem;
   }
 
   .project__card {
     padding: 1.2rem;
-    border-radius: 0.4rem;
   }
 
-  .project__card:hover {
-    transform: translateY(-4px);
-  }
-
-  .project__header {
+  .project__header h3 {
     font-size: 1rem;
-    margin-bottom: 0.7rem;
   }
 
   .project__description {
-    font-size: 0.85rem;
-    line-height: 1.5;
-    margin-bottom: 0.9rem;
+    font-size: 0.8rem;
+    margin-bottom: 0.8rem;
   }
 
-  .projects__more {
-    margin-top: 1.5rem;
+  .project__links {
+    flex-direction: column;
+    gap: 0.4rem;
   }
 
-  .project__more-btn {
-    padding: 0.75rem 1.2rem;
-    font-size: 0.9rem;
-    border-radius: 8px;
+  .project__link {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.75rem;
   }
 
-  /* Contact section mobile */
   .contact {
     padding: 3rem 0;
   }
 
-  .contact .section__title {
-    margin-bottom: 0.8rem;
-  }
-
-  .contact__subtitle {
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
-  }
-
   .contact__content {
-    padding: 1.5rem 1rem;
-    margin: 0 auto 1.5rem;
-  }
-
-  .contact__email-label,
-  .contact__social-label {
-    font-size: 0.85rem;
-    margin-bottom: 0.6rem;
+    padding: 1.5rem 0.8rem;
   }
 
   .contact__email-link {
-    font-size: 1.1rem;
-    padding: 0.4rem 0.8rem;
-  }
-
-  .contact__divider {
-    font-size: 0.8rem;
-    margin: 1.5rem 0;
+    font-size: 1rem;
   }
 
   .social__links {
+    flex-direction: column;
     gap: 0.6rem;
   }
 
   .social__link {
-    padding: 0.5rem 0.9rem;
-    font-size: 0.8rem;
+    width: 100%;
+    justify-content: center;
+    padding: 0.6rem 1rem;
   }
 
   .social__link span {
@@ -1175,13 +1557,8 @@ import IconVue from '@/assets/icons/IconVue.vue';
   }
 
   .social__link svg {
-    width: 18px;
-    height: 18px;
-  }
-
-  .contact__footer {
-    font-size: 0.8rem;
-    margin-top: 1.5rem;
+    width: 20px;
+    height: 20px;
   }
 }
 </style>
