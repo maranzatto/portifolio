@@ -1,4 +1,4 @@
-/* Paleta de Cores Centralizada */
+/* Tema Escuro (padrão) */
 :root {
   /* Cores Primárias */
   --color-primary: #667eea;
@@ -35,14 +35,14 @@
   --color-info-light: #93c5fd;
 
   /* Cores de Fundo */
-  --color-bg-primary: #ffffff;
-  --color-bg-secondary: #f9f9f9;
-  --color-bg-tertiary: #f3f3f3;
+  --color-bg-primary: #181818;
+  --color-bg-secondary: #242424;
+  --color-bg-tertiary: #2a2a2a;
 
   /* Cores de Texto */
-  --color-text-primary: #181818;
-  --color-text-secondary: #666666;
-  --color-text-terciary: #a0a0a0;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #b0b0b0;
+  --color-text-terciary: #808080;
   --color-text-inverse: #ffffff;
 
   /* Cores para Header */
@@ -57,17 +57,4 @@
   /* Gradient */
   --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   --gradient-secondary: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
-}
-
-/* Dark Mode (opcional para o futuro) */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-bg-primary: #181818;
-    --color-bg-secondary: #242424;
-    --color-bg-tertiary: #2a2a2a;
-
-    --color-text-primary: #ffffff;
-    --color-text-secondary: #b0b0b0;
-    --color-text-tertiary: #808080;
-  }
 }
