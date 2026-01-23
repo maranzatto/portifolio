@@ -3,9 +3,8 @@
     <!-- Hero Section -->
     <section id="hero" class="section hero">
       <div class="hero__content">
-        <h1 class="hero__title">Desenvolvedor Front-End & Criativo Digital</h1>
-        <p class="hero__subtitle">Transformando ideias em experiências web excepcionais com código limpo e design
-          intuitivo</p>
+        <h1 class="hero__title">Full Stack Developer | .NET & Vue.js</h1>
+        <p class="hero__subtitle">Construindo aplicações web escaláveis com arquitetura limpa, APIs RESTful e microserviços, sempre priorizando performance e qualidade de código</p>
         <a href="#projects" class="hero__cta">Explorar Meu Trabalho</a>
       </div>
     </section>
@@ -16,25 +15,33 @@
         <h2 class="section__title">Minha Jornada</h2>
         <div class="about__content">
           <p>
-            Olá! Sou <strong>Amitael Maranzatto</strong>, um <strong>Desenvolvedor Front-End</strong> com <strong>3 anos
-              de experiência</strong>
-            apaixonado por criar interfaces que não apenas funcionam bem, mas que encantam usuários. Minha missão é
-            transformar conceitos complexos em experiências digitais simples e memoráveis.
+            Olá! Sou <strong>Amitael Maranzatto</strong>, um <strong>Desenvolvedor Full Stack</strong> com
+            <strong>forte expertise em front-end</strong> utilizando Vue.js e TypeScript e
+            <strong>experiência sólida em back-end</strong> com .NET.
           </p>
 
           <p>
-            Minha especialidade inclui <strong>Vue 3</strong>, <strong>TypeScript</strong>, <strong>JavaScript</strong>
-            moderno e
-            <strong>CSS avançado</strong>. Tenho experiência sólida em <strong>arquitetura de componentes</strong>,
-            <strong>estado reativo</strong> com Pinia, e <strong>integração com APIs REST</strong>. Busco sempre
-            escrever
-            código que seja não apenas funcional, mas também mantível e escalável.
+            Atuo no <strong>design e desenvolvimento de aplicações web escaláveis</strong>,
+            APIs RESTful e soluções baseadas em microserviços, aplicando princípios como
+            <strong>Clean Architecture</strong>, <strong>DDD</strong> e <strong>SOLID</strong>.
           </p>
 
           <p>
-            Fora do código, sou curioso por natureza e estou sempre aprendendo novas tecnologias e tendências de design.
-            Acredito que os melhores produtos nascem da colaboração entre desenvolvimento e design, e busco sempre
-            essa sinergia em todos os projetos que participo.
+            <strong>Stack principal:</strong> .NET (C#), EF Core, REST APIs, Microserviços,
+            PostgreSQL/SQL Server, Vue.js, TypeScript, JavaScript, HTML, CSS, TailwindCSS, Git.
+          </p>
+
+          <p>
+            Foco na construção de <strong>sistemas mantíveis</strong>, <strong>interfaces reutilizáveis</strong>
+            e <strong>serviços back-end bem estruturados</strong>, sempre priorizando
+            <strong>performance</strong>, <strong>qualidade de código</strong> e
+            <strong>escalabilidade a longo prazo</strong>.
+          </p>
+
+          <p>
+            Aberto a oportunidades como <strong>Full Stack Developer</strong>,
+            <strong>Software Engineer</strong> ou papéis de Full Stack com foco em
+            <strong>Backend/Frontend</strong>.
           </p>
         </div>
       </div>
@@ -199,7 +206,11 @@
       <div class="container">
         <h2 class="section__title">Projetos em Destaque</h2>
         <div class="projects__grid">
-          <article class="project__card" v-for="project in featuredProjects" :key="project.id">
+          <div v-if="loading" class="loading-state">
+            <div class="loading-spinner"></div>
+            <p>Carregando projetos em destaque...</p>
+          </div>
+          <article v-else-if="featuredProjects.length > 0" class="project__card" v-for="project in featuredProjects" :key="project.id">
             <div class="project__header">
               <h3>{{ project.title }}</h3>
               <div class="project__meta">
@@ -221,6 +232,10 @@
               </a>
             </div>
           </article>
+          <div v-else-if="!loading" class="empty-state">
+            <i class="pi pi-folder-open" style="font-size: 3rem; opacity: 0.5;"></i>
+            <p>Nenhum projeto em destaque encontrado.</p>
+          </div>
         </div>
         <div class="projects__more">
           <router-link to="/projects" class="project__more-btn">Ver Todos os Projetos</router-link>
@@ -270,6 +285,7 @@
 </template>
 
 <script setup lang="ts">
+import { ref, onMounted } from 'vue'
 import IconAngular from '@/assets/icons/IconAngular.vue';
 import IconCss from '@/assets/icons/IconCss.vue';
 import IconHtml from '@/assets/icons/IconHtml.vue';
@@ -277,7 +293,20 @@ import IconNext from '@/assets/icons/IconNext.vue';
 import IconReact from '@/assets/icons/IconReact.vue';
 import IconTypescript from '@/assets/icons/IconTypescript.vue';
 import IconVue from '@/assets/icons/IconVue.vue';
-import { featuredProjects } from '@/data/projects'
+import { getFeaturedProjects, type Project } from '@/data/projects'
+
+const featuredProjects = ref<Project[]>([])
+const loading = ref(true)
+
+onMounted(async () => {
+  try {
+    featuredProjects.value = await getFeaturedProjects()
+  } catch (error) {
+    console.error('Erro ao carregar projetos em destaque:', error)
+  } finally {
+    loading.value = false
+  }
+})
 </script>
 
 <style scoped>
@@ -1638,5 +1667,28 @@ import { featuredProjects } from '@/data/projects'
     width: 20px;
     height: 20px;
   }
+}
+
+.loading-state,
+.empty-state {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--color-text-secondary);
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(220, 38, 38, 0.2);
+  border-top: 3px solid rgba(220, 38, 38, 0.8);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 1.5rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 </style>

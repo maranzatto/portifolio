@@ -1,3 +1,5 @@
+import { fetchProjects, fetchFeaturedProjects } from '@/services/githubService'
+
 export interface Project {
   id: number
   title: string
@@ -10,7 +12,7 @@ export interface Project {
   demo?: string
 }
 
-export const projects: Project[] = [
+export const staticProjects: Project[] = [
   {
     id: 1,
     title: 'PDVNow',
@@ -61,5 +63,26 @@ export const projects: Project[] = [
   }
 ]
 
-export const featuredProjects = projects.filter(project => project.featured)
-export const allProjects = projects
+export async function getProjects(): Promise<Project[]> {
+  try {
+    const projects = await fetchProjects()
+    return projects.length > 0 ? projects : staticProjects
+  } catch (error) {
+    console.warn('Usando dados estáticos como fallback:', error)
+    return staticProjects
+  }
+}
+
+export async function getFeaturedProjects(): Promise<Project[]> {
+  try {
+    const projects = await fetchFeaturedProjects()
+    return projects.length > 0 ? projects : staticProjects.filter(p => p.featured)
+  } catch (error) {
+    console.warn('Usando dados estáticos como fallback:', error)
+    return staticProjects.filter(p => p.featured)
+  }
+}
+
+export const projects = staticProjects
+export const featuredProjects = staticProjects.filter(project => project.featured)
+export const allProjects = staticProjects

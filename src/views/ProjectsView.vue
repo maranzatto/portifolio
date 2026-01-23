@@ -5,7 +5,12 @@
         <h2 class="section__title">Todos os Projetos</h2>
 
         <div class="projects__grid">
-          <article class="project__card" v-for="project in projects" :key="project.id">
+          <div v-if="loading" class="loading-state">
+            <div class="loading-spinner"></div>
+            <p>Carregando projetos do GitHub...</p>
+          </div>
+
+          <article v-else-if="projects.length > 0" class="project__card" v-for="project in projects" :key="project.id">
             <div class="project__header">
               <h3>{{ project.title }}</h3>
               <div class="project__meta">
@@ -25,6 +30,18 @@
               </a>
             </div>
           </article>
+
+          <div v-else-if="error" class="error-state">
+            <i class="pi pi-exclamation-triangle" style="font-size: 3rem;"></i>
+            <p>{{ error }}</p>
+            <button @click="loadProjects">Tentar Novamente</button>
+          </div>
+
+          <div v-else-if="!loading" class="empty-state">
+            <i class="pi pi-folder-open" style="font-size: 3rem; opacity: 0.5;"></i>
+            <p>Nenhum projeto encontrado no GitHub.</p>
+            <p style="font-size: 0.9rem; opacity: 0.7;">Verifique se seus repositórios públicos possuem descrição.</p>
+          </div>
         </div>
 
         <div class="projects__more">
@@ -36,9 +53,29 @@
 </template>
 
 <script setup lang="ts">
-import { allProjects } from '@/data/projects'
+import { ref, onMounted } from 'vue'
+import { getProjects, type Project } from '@/data/projects'
 
-const projects = allProjects
+const projects = ref<Project[]>([])
+const loading = ref(true)
+const error = ref<string | null>(null)
+
+const loadProjects = async () => {
+  try {
+    loading.value = true
+    error.value = null
+    projects.value = await getProjects()
+  } catch (err) {
+    console.error('Erro ao carregar projetos:', err)
+    error.value = 'Falha ao carregar projetos do GitHub'
+  } finally {
+    loading.value = false
+  }
+}
+
+onMounted(() => {
+  loadProjects()
+})
 </script>
 
 <style scoped>
@@ -252,6 +289,55 @@ const projects = allProjects
 }
 
 .project__more-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(220, 38, 38, 0.3);
+}
+
+.loading-state,
+.empty-state,
+.error-state {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--color-text-secondary);
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(220, 38, 38, 0.2);
+  border-top: 3px solid rgba(220, 38, 38, 0.8);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 1.5rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.error-state {
+  color: #ef4444;
+}
+
+.error-state p {
+  margin-bottom: 1rem;
+}
+
+.error-state button {
+  background: rgba(220, 38, 38, 0.9);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.error-state button:hover {
+  background: rgba(220, 38, 38, 1);
   transform: translateY(-2px);
   box-shadow: 0 10px 25px rgba(220, 38, 38, 0.3);
 }
